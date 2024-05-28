@@ -1,0 +1,299 @@
+:root {
+    --primary: #992725;
+    --bg: #c86156;
+    --bg1: black;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Poopins', 'sans-serif';
+    background-color: var(--bg1);
+    color: #fff; 
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: rgb(200, 97, 86, 0.8);
+    border-bottom: 1px solid var(--primary);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+}
+
+.navbar .navbar-logo {
+    font-size: 2.3rem;
+    font-weight: 700;
+    color: #fff;
+    font-style: italic;
+}
+
+.navbar .navbar-logo span {
+    color: greenyellow;
+}
+
+.navbar .navbar-nav a {
+    color: greenyellow;
+    display: inline-block;
+    font-size: 1.3rem;
+    margin: 0 0.7rem;
+}
+
+.navbar .navbar-nav a:hover {
+    color: var(--primary);
+}
+
+.navbar .navbar-nav a::after {
+    content: '';
+    display: block;
+    padding-bottom: 0.5rem;
+    border-bottom: 0.1rem solid var(--primary);
+    transform: scaleX(0);
+    transition: 0.2s linear;
+}
+
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.5);
+}
+
+.navbar .navbar-extra a {
+    color: #fff;
+    margin: 0 0.8rem;
+}
+
+.navbar .navbar-extra a:hover {
+color: var(--primary);
+}
+
+#hamburger-menu {
+    display: none;
+}
+
+/* Hero Section */
+.hero  {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url('header-bg.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: center;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(0deg, rgba(1,1,3,1) 3%, rgba(255,255,255, 0) 25% );
+}
+
+.hero .content {
+padding: 1.4rem 7%;
+max-width: 60rem;
+}
+
+.hero .content h1 {
+    font-size: 5em;
+    color: black;
+    text-shadow: 1px 1px 3px rgba(1,1,3,0.5);
+    line-height: 1;
+}
+
+.hero .content h1 span {
+    color: greenyellow;
+}
+
+.hero .content p {
+    font-size: 1.8rem;
+    margin-top: 1rem;
+    line-height: 1;
+    color: rgb(47, 19, 19);
+}
+
+/* About Section */
+.about {
+    padding: 8rem 7% 1.4rem;
+}
+
+.about h2 {
+    text-align: center;
+    font-size: 2.6rem;
+    margin-bottom: 3rem;
+}
+
+.about h2 span {
+    color: greenyellow ;
+}
+
+.about .row {
+    display: flex;
+}
+
+.about .row .about-img {
+    flex: 1 1 45rem;
+}
+
+.about .row .about-img img{
+    width: 100%;
+}
+
+
+.about .row .content {
+    flex: 1 1 35rem;
+    padding: 0 1rem;
+}
+
+.about .row .content h3 {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+}
+
+.about .row .content h3 span {
+    color: greenyellow;
+}
+.about .row .content p {
+    margin-bottom: 0.8rem;
+    font-size: 1.4rem;
+    text-align: justify;
+    font-weight: 200;
+    line-height: 1.6;
+    color: floralwhite;
+}
+
+.about .row .content p span {
+    color: greenyellow;
+}
+
+/* Game Section */
+.product {
+    padding-top: 9rem ;
+    
+}
+
+.product h2 {
+    text-align: center;
+    font-size: 2.6rem;
+    margin-bottom: 3rem
+}
+
+.product h2 span {
+    color: greenyellow;
+}
+
+
+.game {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url('product2-us.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.game .content {
+    padding: 1.4rem 7%;
+    max-width: 60rem;
+}
+    
+.game .content h1 {
+    font-size: 4em;
+    color: rgb(243, 234, 234);
+    text-shadow: 1px 1px 3px rgba(1,1,3,0.5);
+    line-height: 1;
+}
+
+.game .content p {
+    font-size: 1.3rem;
+}
+.game .content .cta {
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 1rem 3rem;
+    font-size: 2.3rem;
+    color: greenyellow;
+    background-color: var(--primary);
+    border-radius: 0.5rem;
+    box-shadow: 1px 1px 3px rgba(1,1,3,0.5);
+}
+
+
+/* Media Queries */
+
+/* Laptop */
+@media (max-width: 1366px) {
+    html {
+        font-size: 87%;
+    }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+html {
+        font-size: 62.5%;
+    }
+#hamburger-menu {
+        display: inline-block;
+    }
+.navbar .navbar-nav {
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        background-color: #fff;
+        width: 30rem;
+        height: 100vh;
+    }
+.navbar .navbar-nav.active {
+    right: 0;
+}
+.navbar .navbar-nav a {
+    color: rgb(65, 171, 65);
+    display: block;
+    margin: 1.5rem;
+    padding: 0.5rem;
+    font-size: 2rem;
+}
+.navbar .navbar-nav a::after {
+    transform-origin: 0 0;
+}
+.navbar .navbar-nav a:hover::after {
+    transform: scaleX(0.2)
+}
+.about .row {
+    flex-wrap: wrap;
+}
+.about .row .content {
+    padding: 0;
+}
+.about .row .content h3 {
+    margin-top: 1rem;
+    font-size: 1.6rem;
+}
+}
+
+/* Mobile Phone */
+@media (max-width: 450px) {
+    html {
+        font-size: 55%;
+        
+    }
+}
+
+
